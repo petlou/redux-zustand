@@ -47,33 +47,32 @@ Este repositório contém o código para uma aplicação **React** que compara o
 ### Pré-requisitos:
 
 - **Node.js** instalado.
-- **npm** ou **yarn** instalado.
+- **pnpm** instalado (recomendado).
 
 ### Passos:
 
 1. **Clone o repositório**:
+
    ```bash
    git clone https://github.com/usuario/redux-zustand.git
    ```
 
 2. **Instale as dependências**:
    Navegue até o diretório do projeto e execute:
+
    ```bash
-   npm install
-   # ou
-   yarn
+   pnpm install
    ```
 
 3. **Inicie o servidor**:
    Execute o seguinte comando para iniciar o servidor localmente:
+
    ```bash
-   npm start
-   # ou
-   yarn start
+   pnpm run dev
    ```
 
 4. **Acesse a aplicação**:
-   Acesse [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação rodando.
+   Acesse [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação rodando.
 
 ## Como Alternar entre Redux e Zustand
 
@@ -83,14 +82,16 @@ Na página principal, há um botão que permite alternar entre **Redux** e **Zus
 
 Testes unitários foram implementados para testar a lógica dos hooks e o gerenciamento de estado com Redux e Zustand.
 
-### Para rodar os testes:
+<!-- ### Para rodar os testes:
 
 Execute o seguinte comando:
+
 ```bash
 npm test
 # ou
 yarn test
 ```
+ -->
 
 ## Documentação Adicional
 
