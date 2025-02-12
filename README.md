@@ -64,17 +64,24 @@ Este repositório contém o código para uma aplicação **React** que compara o
    pnpm install
    ```
 
-3. **Inicie o servidor**:
+3. **Crie as variáveis de ambiente**:
+   Crie um novo arquivo `.env` a partir do arquivo `env.example` e utilize a seguinte URL
+
+   ```bash
+   https://dummyjson.com
+   ```
+
+4. **Inicie o servidor**:
    Execute o seguinte comando para iniciar o servidor localmente:
 
    ```bash
    pnpm run dev
    ```
 
-4. **Acesse a aplicação**:
+5. **Acesse a aplicação**:
    Acesse [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação rodando.
 
-## Como Alternar entre Redux e Zustand
+<!-- ## Como Alternar entre Redux e Zustand
 
 Na página principal, há um botão que permite alternar entre **Redux** e **Zustand**. Esse botão, localizado no cabeçalho, altera dinamicamente o gerenciamento de estado utilizado no carrinho de compras.
 
@@ -82,7 +89,7 @@ Na página principal, há um botão que permite alternar entre **Redux** e **Zus
 
 Testes unitários foram implementados para testar a lógica dos hooks e o gerenciamento de estado com Redux e Zustand.
 
-<!-- ### Para rodar os testes:
+### Para rodar os testes:
 
 Execute o seguinte comando:
 
