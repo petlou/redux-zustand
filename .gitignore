@@ -28,3 +28,6 @@ dist-ssr
 
 # Tests
 __test__/coverage/*
+
+# TypeScript cache
+*.tsbuildinfo
