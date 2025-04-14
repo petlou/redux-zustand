@@ -1,123 +1,83 @@
 # 🛒 Comparação de Gerenciamento de Estado com Redux e Zustand
 
-## Sobre
+> Status do Projeto: :warning: (em desenvolvimento).
 
-Este repositório contém o código para uma aplicação **React** que compara o gerenciamento de estado utilizando **Redux** e **Zustand**. A aplicação permite alternar entre essas duas soluções para gerenciar o estado global do carrinho de compras e utiliza **React Query** para consumo de uma API externa de produtos.
+## 🚀 Sobre
 
-## Funcionalidades Principais
+Este repositório contém uma aplicação **React** que compara o uso de duas das bibliotecas mais populares para gerenciamento de estado global: **Redux** e **Zustand**. A aplicação permite alternar entre essas duas abordagens para gerenciar o **carrinho de compras** e utiliza **React Query** para consumir dados de uma API externa.
 
-- **Alternância entre Redux e Zustand**: O usuário pode alternar entre Redux e Zustand em tempo real.
-- **Carrinho de Compras**: Os produtos podem ser adicionados ou removidos do carrinho.
-- **React Query**: O consumo da API de produtos é gerenciado pelo React Query.
-- **Interface Simples**: Uma interface básica para visualizar produtos e o carrinho.
+O objetivo é fornecer uma comparação prática entre as duas soluções, facilitando a escolha de qual utilizar em seu próximo projeto!
 
-## Estrutura de Pastas
+## 🎯 Funcionalidades
 
-```bash
+- **Alternância entre Redux e Zustand**: Troque facilmente entre as duas soluções de gerenciamento de estado em tempo real.
+- **Carrinho de Compras**: Gerencie o carrinho com funcionalidades de adicionar e remover produtos.
+- **React Query**: Consome dados de produtos de uma API externa e gerencia o estado assíncrono de maneira eficiente.
+- **Interface Intuitiva**: Visualize os produtos e o estado do carrinho de maneira simples e clara.
+
+## 🧑‍💻 Estrutura do Projeto
+
+```
 /src
   /components
-    Header.js           # Componente de cabeçalho com título e botão de alternância entre Redux e Zustand
-    ProductList.js      # Exibe a lista de produtos
-    ProductItem.js      # Componente para cada produto individual
-    Cart.js             # Exibe os produtos no carrinho
+    Header.js               # Componente de cabeçalho com alternância entre Redux e Zustand
+    ProductList.js          # Exibe a lista de produtos
+    ProductItem.js          # Componente para exibição de um único produto
+    Cart.js                 # Componente que exibe os itens do carrinho
   /redux
-    store.js            # Configuração da store Redux
-    cartSlice.js        # Slice para gerenciamento do estado do carrinho em Redux
+    store.js                # Configuração da store Redux
+    cartSlice.js            # Slice para gerenciamento do carrinho com Redux
   /zustand
-    useCartStore.js     # Store Zustand para gerenciamento do carrinho
-    ZustandCartProvider.js # Wrapper opcional para Zustand
+    useCartStore.js         # Store Zustand para gerenciamento do carrinho
+    ZustandCartProvider.js  # Wrapper opcional para Zustand
   /hooks
-    useProducts.js      # Hook que utiliza React Query para buscar produtos
+    useProducts.js          # Hook com React Query para busca de produtos
   /api
-    productApi.js       # Funções para consumo da API de produtos
-  App.js                # Componente principal que integra todas as funcionalidades
-  index.js              # Entrada da aplicação React
+    productApi.js           # Funções para interação com a API de produtos
+  App.js                    # Componente principal que integra a aplicação
+  index.js                  # Ponto de entrada da aplicação React
 ```
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- **React**: Construção da interface de usuário.
+- **React**: Biblioteca principal para construção da interface de usuário.
 - **Redux**: Gerenciamento de estado global com store e slices.
-- **Zustand**: Alternativa ao Redux para gerenciamento de estado global.
-- **React Query**: Gerenciamento de estado assíncrono e cache de dados da API.
+- **Zustand**: Alternativa leve e simples ao Redux para gerenciamento de estado.
+- **React Query**: Gerenciamento eficiente de dados assíncronos e caching.
 - **Axios**: Cliente HTTP para consumo da API externa.
 
-## Como Executar o Projeto Localmente
+## 💻 Como Executar Localmente
 
-### Pré-requisitos:
+### Pré-requisitos
 
-- **Node.js** instalado.
-- **pnpm** instalado (recomendado).
+Antes de começar, você precisa ter o seguinte instalado em sua máquina:
 
-### Passos:
+- **Node.js** (versão recomendada: 16.x ou superior).
+- **pnpm** (recomendado) para gerenciamento de dependências.
+
+### Passos para Execução
 
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/usuario/redux-zustand.git
+   git clone https://github.com/petlou/redux-zustand.git
    ```
 
 2. **Instale as dependências**:
-   Navegue até o diretório do projeto e execute:
 
    ```bash
    pnpm install
    ```
 
-3. **Crie as variáveis de ambiente**:
-   Crie um novo arquivo `.env` a partir do arquivo `env.example` e utilize a seguinte URL
-
-   ```bash
-   https://dummyjson.com
-   ```
-
-4. **Inicie o servidor**:
-   Execute o seguinte comando para iniciar o servidor localmente:
+3. **Inicie o servidor local**:
 
    ```bash
    pnpm run dev
    ```
 
-5. **Acesse a aplicação**:
-   Acesse [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação rodando.
+4. Abra a aplicação no navegador em: [http://localhost:5173](http://localhost:5173).
 
-<!-- ## Como Alternar entre Redux e Zustand
+## 📜 Licença
 
-Na página principal, há um botão que permite alternar entre **Redux** e **Zustand**. Esse botão, localizado no cabeçalho, altera dinamicamente o gerenciamento de estado utilizado no carrinho de compras.
+Este projeto foi desenvolvido para fins educacionais. Sinta-se à vontade para estudar, utilizar e adaptar!
 
-## Testes
-
-Testes unitários foram implementados para testar a lógica dos hooks e o gerenciamento de estado com Redux e Zustand.
-
-### Para rodar os testes:
-
-Execute o seguinte comando:
-
-```bash
-npm test
-# ou
-yarn test
-```
- -->
-
-## Documentação Adicional
-
-- **Redux**: [Documentação Oficial](https://redux.js.org/)
-- **Zustand**: [Documentação Oficial](https://docs.pmnd.rs/zustand/getting-started/introduction)
-- **React Query**: [Documentação Oficial](https://react-query.tanstack.com/overview)
-
-## Contribuição
-
-Contribuições são bem-vindas! Para contribuir com este repositório:
-
-1. Faça um fork deste repositório.
-2. Crie uma nova branch: `git checkout -b minha-feature`.
-3. Commit suas alterações: `git commit -m 'Minha nova feature'`.
-4. Push para a branch: `git push origin minha-feature`.
-5. Abra um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
-
----
